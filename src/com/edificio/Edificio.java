@@ -1,11 +1,14 @@
 package com.edificio;
 
+import java.util.Arrays;
+
 public class Edificio {
 	
 	private String material;
 	private String color;
 	private double largo;
 	private double ancho;
+	Apartamento apartamento[];
 	
 	public String getMaterial() {
 		return material;
@@ -31,14 +34,18 @@ public class Edificio {
 	public void setAncho(double ancho) {
 		this.ancho = ancho;
 	}
+	
+	public Apartamento[] getApartamento() {
+		return apartamento;
+	}
+	public void setApartamento(Apartamento[] apartamento) {
+		this.apartamento = apartamento;
+	}
 	@Override
 	public String toString() {
-		return "Edificio: [material=" + material + ", color=" + color + ", largo=" + largo + ", ancho=" + ancho + "]";
+		return "Edificio [material=" + material + ", color=" + color + ", largo=" + largo + ", ancho=" + ancho
+				+ ", apartamento=" + Arrays.toString(apartamento) + "]";
 	}
 	
 	
-	
-	
-	
-
 }

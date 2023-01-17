@@ -1,14 +1,15 @@
 package com.edificio;
 
+import java.util.Arrays;
+
 public class Baño {
 
 	private double largo;
 	private double ancho;
 	private String color;
-	private boolean espejo;
-	private int numVentanas;
-	private int numPuertas;
-	
+	private boolean tieneEspejo;
+	private Ventana[] ventana;
+	private Puerta[] puertas;
 	
 	public double getLargo() {
 		return largo;
@@ -28,29 +29,30 @@ public class Baño {
 	public void setColor(String color) {
 		this.color = color;
 	}
-	public boolean isEspejo() {
-		return espejo;
+	public Ventana[] getVentana() {
+		return ventana;
 	}
-	public void setEspejo(boolean espejo) {
-		this.espejo = espejo;
+	public void setVentana(Ventana[] ventana) {
+		this.ventana = ventana;
 	}
-	public int getNumVentanas() {
-		return numVentanas;
+	public Puerta[] getPuertas() {
+		return puertas;
 	}
-	public void setNumVentanas(int numVentanas) {
-		this.numVentanas = numVentanas;
+	public void setPuertas(Puerta[] puertas) {
+		this.puertas = puertas;
 	}
-	public int getNumPuertas() {
-		return numPuertas;
+	public boolean isTieneEspejo() {
+		return tieneEspejo;
 	}
-	public void setNumPuertas(int numPuertas) {
-		this.numPuertas = numPuertas;
+	public void setTieneEspejo(boolean tieneEspejo) {
+		this.tieneEspejo = tieneEspejo;
 	}
 	@Override
 	public String toString() {
-		return "Baño: [largo=" + largo + ", ancho=" + ancho + ", color=" + color + ", espejo=" + espejo
-				+ ", numero de Ventanas=" + numVentanas + ", numero de Puertas=" + numPuertas + "]";
+		return "Baño [largo=" + largo + ", ancho=" + ancho + ", color=" + color + ", tieneEspejo=" + tieneEspejo
+				+ ", ventana=" + Arrays.toString(ventana) + ", puertas=" + Arrays.toString(puertas) + "]";
 	}
+	
 	
 	
 }

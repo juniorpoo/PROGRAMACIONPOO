@@ -1,13 +1,15 @@
 package com.edificio;
 
+import java.util.Arrays;
+
 public class Apartamento {
 	
 	private int numApartamento;
 	private String color;
 	private double largo;
 	private double ancho;
-	private int  numHabitaciones;
-	
+	private Habitacion[] habitaciones;
+	private Baño[] banos;
 	
 	public int getNumApartamento() {
 		return numApartamento;
@@ -33,18 +35,15 @@ public class Apartamento {
 	public void setAncho(double ancho) {
 		this.ancho = ancho;
 	}
-	public int  getNumHabitaciones() {
-		return numHabitaciones;
+	public Habitacion[] getHabitaciones() {
+		return habitaciones;
 	}
-	public void setNumHabitaciones(int  numHabitaciones) {
-		this.numHabitaciones = numHabitaciones;
+	public void setHabitaciones(Habitacion[] habitaciones) {
+		this.habitaciones = habitaciones;
 	}
 	@Override
 	public String toString() {
-		return "Apartamento: [numero de Apartamento=" + numApartamento + ", color=" + color + ", largo=" + largo + ", ancho="
-				+ ancho + ", numero de Habitaciones=" + numHabitaciones + "]";
+		return "Apartamento [numApartamento=" + numApartamento + ", color=" + color + ", largo=" + largo + ", ancho="
+				+ ancho + ", habitaciones=" + Arrays.toString(habitaciones) + "]";
 	}
-	
-	
-
 }

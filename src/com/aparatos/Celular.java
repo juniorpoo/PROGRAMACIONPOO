@@ -3,11 +3,11 @@ package com.aparatos;
 public class Celular extends AparatoElectronico{
 
 	protected String marca;
-	protected boolean touch;
-	protected boolean usoWifi;
-	protected boolean recargable;
-	protected boolean camara;
-	protected boolean aPruebaDeAgua;
+	protected boolean esTouch;
+	protected boolean usaWifi;
+	protected boolean esRecargable;
+	protected boolean tieneCamara;
+	protected boolean esAPruebaDeAgua;
 	
 	public String getMarca() {
 		return marca;
@@ -15,39 +15,41 @@ public class Celular extends AparatoElectronico{
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	public String getTouch() {
-		return touch;
+	public boolean isEsTouch() {
+		return esTouch;
 	}
-	public void setTouch(String touch) {
-		this.touch = touch;
+	public void setEsTouch(boolean esTouch) {
+		this.esTouch = esTouch;
 	}
-	public String getUsoWifi() {
-		return usoWifi;
+	public boolean isUsaWifi() {
+		return usaWifi;
 	}
-	public void setUsoWifi(String usoWifi) {
-		this.usoWifi = usoWifi;
+	public void setUsaWifi(boolean usaWifi) {
+		this.usaWifi = usaWifi;
 	}
-	public String getRecargable() {
-		return recargable;
+	public boolean isEsRecargable() {
+		return esRecargable;
 	}
-	public void setRecargable(String recargable) {
-		this.recargable = recargable;
+	public void setEsRecargable(boolean esRecargable) {
+		this.esRecargable = esRecargable;
 	}
-	public String getCamara() {
-		return camara;
+	public boolean isTieneCamara() {
+		return tieneCamara;
 	}
-	public void setCamara(String camara) {
-		this.camara = camara;
+	public void setTieneCamara(boolean tieneCamara) {
+		this.tieneCamara = tieneCamara;
 	}
-	public String getaPruebaDeAgua() {
-		return aPruebaDeAgua;
+	public boolean isEsAPruebaDeAgua() {
+		return esAPruebaDeAgua;
 	}
-	public void setaPruebaDeAgua(String aPruebaDeAgua) {
-		this.aPruebaDeAgua = aPruebaDeAgua;
+	public void setEsAPruebaDeAgua(boolean esAPruebaDeAgua) {
+		this.esAPruebaDeAgua = esAPruebaDeAgua;
 	}
-	
-	
-	
-	
+	@Override
+	public String toString() {
+		return "Celular [marca=" + marca + ", esTouch=" + esTouch + ", usaWifi=" + usaWifi + ", esRecargable="
+				+ esRecargable + ", tieneCamara=" + tieneCamara + ", esAPruebaDeAgua=" + esAPruebaDeAgua + "]";
+	}
+
 	
 }

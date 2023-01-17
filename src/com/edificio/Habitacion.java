@@ -1,13 +1,15 @@
 package com.edificio;
 
+import java.util.Arrays;
+
 public class Habitacion {
 	
 	private String color;
 	private double ancho;
 	private double largo;
-	private int numVentanas;
-	private int numPuertas;
-	
+	private Puerta[] puertas;
+	private Baño bano;
+	private Ventana[] ventanas;
 	
 	public String getColor() {
 		return color;
@@ -27,26 +29,30 @@ public class Habitacion {
 	public void setLargo(double largo) {
 		this.largo = largo;
 	}
-	public int getNumVentanas() {
-		return numVentanas;
+	
+	public Puerta[] getPuertas() {
+		return puertas;
 	}
-	public void setNumVentanas(int numVentanas) {
-		this.numVentanas = numVentanas;
+	public void setPuertas(Puerta[] puertas) {
+		this.puertas = puertas;
 	}
-	public int getNumPuertas() {
-		return numPuertas;
+	public Baño getBano() {
+		return bano;
 	}
-	public void setNumPuertas(int numPuertas) {
-		this.numPuertas = numPuertas;
+	public void setBano(Baño bano) {
+		this.bano = bano;
+	}
+	public Ventana[] getVentanas() {
+		return ventanas;
+	}
+	public void setVentanas(Ventana[] ventanas) {
+		this.ventanas = ventanas;
 	}
 	@Override
 	public String toString() {
-		return "Habitacion: [color=" + color + ", ancho=" + ancho + ", largo=" + largo + ", numVentanas=" + numVentanas
-				+ ", numPuertas=" + numPuertas + "]";
+		return "Habitacion [color=" + color + ", ancho=" + ancho + ", largo=" + largo + ", puertas="
+				+ Arrays.toString(puertas) + ", bano=" + bano + ", ventanas=" + Arrays.toString(ventanas) + "]";
 	}
 	
 	
-	
-	
-
 }
