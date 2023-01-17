@@ -1,23 +1,24 @@
 package com.edificio;
 
-public class Edificio {
+public class Ventana {
 	
-	private String material;
 	private String color;
+	private String material;
 	private double largo;
 	private double ancho;
 	
-	public String getMaterial() {
-		return material;
-	}
-	public void setMaterial(String material) {
-		this.material = material;
-	}
+	
 	public String getColor() {
 		return color;
 	}
 	public void setColor(String color) {
 		this.color = color;
+	}
+	public String getMaterial() {
+		return material;
+	}
+	public void setMaterial(String material) {
+		this.material = material;
 	}
 	public double getLargo() {
 		return largo;
@@ -33,11 +34,8 @@ public class Edificio {
 	}
 	@Override
 	public String toString() {
-		return "Edificio: [material=" + material + ", color=" + color + ", largo=" + largo + ", ancho=" + ancho + "]";
+		return "Ventana [color=" + color + ", material=" + material + ", largo=" + largo + ", ancho=" + ancho + "]";
 	}
-	
-	
-	
 	
 	
 
