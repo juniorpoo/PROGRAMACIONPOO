@@ -54,5 +54,4 @@ public class Habitacion {
 				+ Arrays.toString(puertas) + ", bano=" + bano + ", ventanas=" + Arrays.toString(ventanas) + "]";
 	}
 	
-	
 }

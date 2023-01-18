@@ -3,8 +3,8 @@ package com.edificio;
 public class Main {
 
 	public static void main(String[] args) {
-
-		Edificio edificio=new Edificio();
+		
+		/*Edificio edificio=new Edificio();
 		edificio.setAncho(100.34);
 		edificio.setLargo(125.9);
 		edificio.setColor("Blanco");
@@ -82,7 +82,122 @@ public class Main {
 		System.out.println(habitacion);
 		System.out.println(puerta);
 		System.out.println(ventana);
-		System.out.println(bano);
+		System.out.println(bano);*/
+		
+		Ventana v1 = crearYDevolverObjectoVentana(41.2,16.3,"Gris","Aluminio");
+		Ventana v2 = crearYDevolverObjectoVentana(10.2,25.3,"azul","sin");
+		Ventana v3 = crearYDevolverObjectoVentana(4.2,6.3,"blanco","madera");
+		
+		Ventana ventana[]=new Ventana[3];
+		ventana[0]=v1;
+		ventana[1]=v2;
+		ventana[2]=v3;
+		
+		Puerta door[]=new Puerta[1];
+		Puerta puerta=crearYDevolverObjetoPuerta(12.4,19.5,"Amarillo","sin");
+		door[0]=puerta;
+		
+		Baño bano1=crearYDevolverObjetoBaño(32.5,45.8,"Negro",door,true,ventana);
+		
+		Puerta puerta1=crearYDevolverObjetoPuerta(12.3,24.5,"Marron","Madera");
+		Puerta puerta2=crearYDevolverObjetoPuerta(13.3,29.5,"negro","metal");
+		
+		Puerta  puertas[]=new Puerta[2];
+		puertas[0]=puerta1;
+		puertas[1]=puerta2;
+	    
+		Habitacion hb1=crearYDevolverObjetoHabitacion(12.3,43.76,bano1,"Mamen",puertas,ventana);
+		Habitacion hb2=crearYDevolverObjetoHabitacion(15.3,42.36,bano1,"Rojo",puertas,ventana);
+		Habitacion hb3=crearYDevolverObjetoHabitacion(17.3,48.66,bano1,"azul",puertas,ventana);
+		Habitacion hb4=crearYDevolverObjetoHabitacion(18.3,49.96,bano1,"amarillo",puertas,ventana);
+		
+		Habitacion habitacion[]=new Habitacion[4];
+		habitacion[0]=hb1;
+		habitacion[1]=hb2;
+		habitacion[2]=hb3;
+		habitacion[3]=hb4;
+		
+		Apartamento ap1=crearYDevolverObjetoApartamento(21.4,45.9,"Verde",habitacion,402);
+		Apartamento ap2=crearYDevolverObjetoApartamento(24.4,35.9,"Amarillo",habitacion,403);
+		Apartamento []apartment=new Apartamento[2];
+		apartment[0]=ap1;
+		apartment[1]=ap2;
+		
+		Edificio ed1=crearYDevolverObjetoEdificio(54.9,76.9,"Block","blanco",apartment);
+		Edificio ed2=crearYDevolverObjetoEdificio(54.9,76.9,"cristal","rojo",apartment);
+		Edificio ed3=crearYDevolverObjetoEdificio(54.9,76.9,"Metal","Azul",apartment);
+		System.out.println(bano1);
 	}
+	
+	
+	
+	
+	public static Ventana crearYDevolverObjectoVentana(double ancho, double largo, String color, String material) {
+		Ventana v = new Ventana();
+		v.setAncho(ancho);
+		v.setColor(color);
+		v.setLargo(largo);
+		v.setMaterial(material);
+		return v;
+	}
+	
+	public static Edificio crearYDevolverObjetoEdificio(double ancho,double largo,String material,String color,Apartamento[]ap) {
+		
+		Edificio ed=new Edificio();
+		ed.setAncho(ancho);
+		ed.setLargo(largo);
+		ed.setMaterial(material);
+		ed.setColor(color);
+		ed.setApartamento(ap);
+		return ed;
+	}
+	
+	public static Apartamento crearYDevolverObjetoApartamento(double ancho,double largo,String color,Habitacion[]hb,int numApartamento){
+		
+		Apartamento ap1=new Apartamento();
+		ap1.setAncho(ancho);
+		ap1.setLargo(largo);
+		ap1.setColor(color);
+		ap1.setHabitaciones(hb);
+		ap1.setNumApartamento(numApartamento);
+		return ap1;
+	}
+	
+	public static Habitacion crearYDevolverObjetoHabitacion(double ancho,double largo, Baño bano,String color,Puerta[]puertas,Ventana[]ventanas) {
+		
+		Habitacion hb=new Habitacion();
+		hb.setAncho(ancho);
+		hb.setLargo(largo);
+		hb.setBano(bano);
+		hb.setColor(color);
+		hb.setPuertas(puertas);
+		hb.setVentanas(ventanas);
+		return hb;
+	}
+	
+	public static Baño crearYDevolverObjetoBaño(double ancho,double largo,String color,Puerta[]puertas,boolean TieneEspejo,Ventana[]ventanas) {
+		
+		Baño bano=new Baño();
+		bano.setAncho(ancho);
+		bano.setLargo(largo);
+		bano.setColor(color);
+		bano.setPuertas(puertas);
+		bano.setTieneEspejo(TieneEspejo);
+		bano.setVentana(ventanas);
+		
+		return bano;
+	}
+	
+	public static Puerta crearYDevolverObjetoPuerta(double ancho, double largo,String color,String material) {
+		
+		Puerta puerta=new Puerta();
+		puerta.setAncho(ancho);
+		puerta.setLargo(largo);
+		puerta.setColor(color);
+		puerta.setMaterial(material);
+		
+		return puerta;
+	}
+	
 
 }

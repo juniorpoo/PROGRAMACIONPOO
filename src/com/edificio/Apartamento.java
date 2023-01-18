@@ -46,4 +46,5 @@ public class Apartamento {
 		return "Apartamento [numApartamento=" + numApartamento + ", color=" + color + ", largo=" + largo + ", ancho="
 				+ ancho + ", habitaciones=" + Arrays.toString(habitaciones) + "]";
 	}
+	
 }

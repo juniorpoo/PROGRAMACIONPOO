@@ -10,7 +10,7 @@ public class Edificio {
 	private double ancho;
 	Apartamento apartamento[];
 	
-	public String getMaterial() {
+	public  String getMaterial() {
 		return material;
 	}
 	public void setMaterial(String material) {
@@ -46,6 +46,8 @@ public class Edificio {
 		return "Edificio [material=" + material + ", color=" + color + ", largo=" + largo + ", ancho=" + ancho
 				+ ", apartamento=" + Arrays.toString(apartamento) + "]";
 	}
+	
+	
 	
 	
 }
