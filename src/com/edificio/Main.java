@@ -98,7 +98,10 @@ public class Main {
 		door[0]=puerta;
 		
 		Baño bano1=crearYDevolverObjetoBaño(32.5,45.8,"Negro",door,true,ventana);
-		
+		Baño bano2=crearYDevolverObjetoBaño(24.3,37.8,"Blanco",door,false,ventana);
+		Baño[]bano=new Baño[2];
+		bano[0]=bano1;
+		bano[1]=bano2;
 		Puerta puerta1=crearYDevolverObjetoPuerta(12.3,24.5,"Marron","Madera");
 		Puerta puerta2=crearYDevolverObjetoPuerta(13.3,29.5,"negro","metal");
 		
@@ -126,10 +129,72 @@ public class Main {
 		Edificio ed1=crearYDevolverObjetoEdificio(54.9,76.9,"Block","blanco",apartment);
 		Edificio ed2=crearYDevolverObjetoEdificio(54.9,76.9,"cristal","rojo",apartment);
 		Edificio ed3=crearYDevolverObjetoEdificio(54.9,76.9,"Metal","Azul",apartment);
-		System.out.println(bano1);
+		
+		Edificio[]edificios=new Edificio[3];
+		edificios[0]=ed1;
+		edificios[1]=ed2;
+		edificios[2]=ed3;
+		//imprimirColorYMaterialDelObjetoEdificio(edificios);
+		//imprimirLargoYAnchoDeObjetoApartamento(apartment);
+		//imprimirLargoYColorDeObjetoHabitacion(habitacion);
+		//imprimirMaterialYColorDEObjetoPuerta(puertas);
+		//imprimirSiTieneEspejoYAnchoDelObjetoBaño(bano);
+		imprimirAnchoYMaterialDeObjetoVentana(ventana);
 	}
 	
+	public static void imprimirColorYMaterialDelObjetoEdificio(Edificio[]edificios) {
+		for(int i=0;i<edificios.length;i++) {
+			Edificio ed=edificios[i];
+			System.out.println("Color: "+ed.getColor());
+			System.out.println("Material: "+ed.getMaterial());
+		}
+		
+	}
 	
+	public static void imprimirLargoYAnchoDeObjetoApartamento(Apartamento[]apartamentos) {
+		for(int i=0;i<apartamentos.length;i++) {
+			Apartamento ap=apartamentos[i];
+			System.out.println("Largo: "+ap.getLargo());
+			System.out.println("Ancho: "+ap.getAncho());
+		}
+		
+	}
+	
+	public static void imprimirLargoYColorDeObjetoHabitacion(Habitacion[]habitaciones) {
+		for(int i=0;i<habitaciones.length;i++) {
+			Habitacion hab=habitaciones[i];
+			System.out.println("Largo: "+hab.getLargo());
+			System.out.println("Color: "+hab.getColor());
+		}
+	}
+	
+	public static void imprimirMaterialYColorDEObjetoPuerta(Puerta[]puertas) {
+		for(int i=0;i<puertas.length;i++) {
+			Puerta puerta=puertas[i];
+			System.out.println("Material: "+puerta.getMaterial());
+			System.out.println("Color: "+puerta.getColor());
+		}
+		
+	}
+	
+	public static void imprimirSiTieneEspejoYAnchoDelObjetoBaño(Baño[]banos) {
+		for(int i=0;i<banos.length;i++) {
+			Baño bano=banos[i];
+			System.out.println("Tiene Espejo: "+bano.isTieneEspejo());
+			System.out.println("Ancho: "+bano.getAncho());
+		}
+		
+	}
+	
+	public static void imprimirAnchoYMaterialDeObjetoVentana(Ventana[]ventanas) {
+		for(int i=0;i<ventanas.length;i++) {
+			Ventana vent=ventanas[i];
+			System.out.println("Ancho: "+vent.getAncho());
+			System.out.println("Material: "+vent.getMaterial());
+			
+		
+		}
+	}
 	
 	
 	public static Ventana crearYDevolverObjectoVentana(double ancho, double largo, String color, String material) {
