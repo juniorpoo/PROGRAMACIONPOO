@@ -2,6 +2,29 @@ package com.edificio;
 
 public class Ventana {
 	
+	
+	// constructor por defecto.
+	public Ventana() {}
+	
+	public Ventana(String c) {
+		this.color = c;
+	}
+	public Ventana(String col, String mat) {
+		this(col);
+		this.material = mat;
+	}
+	
+	public Ventana(String col, String mat,double lar) {
+		this(col, mat);
+		largo = lar;
+	}
+	
+	public Ventana(String col, String mat,double lar, double anc) {
+		this(col, mat, lar);
+		this.ancho=anc;
+	}
+	
+	
 	private String color;
 	private String material;
 	private double largo;
@@ -9,8 +32,14 @@ public class Ventana {
 	
 	
 	public String getColor() {
+		
+		this.calcularAlgo();
+		this.calcularAlgo1();
+		
 		return color;
 	}
+	
+	
 	public void setColor(String color) {
 		this.color = color;
 	}
@@ -37,6 +66,12 @@ public class Ventana {
 		return "Ventana [color=" + color + ", material=" + material + ", largo=" + largo + ", ancho=" + ancho + "]";
 	}
 	
+	private void calcularAlgo() {
+		
+	}
 	
+	protected void calcularAlgo1() {
+		
+	}
 
 }

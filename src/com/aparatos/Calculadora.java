@@ -2,21 +2,28 @@ package com.aparatos;
 
 public class Calculadora extends AparatoElectronico{
 
-	protected String teclado;
-	protected String pantalla;
+	protected String tipoTeclado;
+	protected String tipoPantalla;
+	
+	public String getTipoTeclado() {
+		return tipoTeclado;
+	}
+	public void setTipoTeclado(String tipoTeclado) {
+		this.tipoTeclado = tipoTeclado;
+	}
+	public String getTipoPantalla() {
+		return tipoPantalla;
+	}
+	public void setTipoPantalla(String tipoPantalla) {
+		this.tipoPantalla = tipoPantalla;
+	}
+	@Override
+	public String toString() {
+		return "Calculadora [tipoTeclado=" + tipoTeclado + ", tipoPantalla=" + tipoPantalla + "]";
+	}
 	
 	
-	public String getTeclado() {
-		return teclado;
-	}
-	public void setTeclado(String teclado) {
-		this.teclado = teclado;
-	}
-	public String getPantalla() {
-		return pantalla;
-	}
-	public void setPantalla(String pantalla) {
-		this.pantalla = pantalla;
-	}
+	
+	
 	
 }

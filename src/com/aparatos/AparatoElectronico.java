@@ -35,8 +35,13 @@ public class AparatoElectronico {
 	public double getPeso() {
 		return peso;
 	}
-	public void setPeso(int peso) {
+	public void setPeso(double peso) {
 		this.peso = peso;
+	}
+	@Override
+	public String toString() {
+		return "AparatoElectronico [color=" + color + ", largo=" + largo + ", ancho=" + ancho + ", material=" + material
+				+ ", peso=" + peso + "]";
 	}
 	
 	

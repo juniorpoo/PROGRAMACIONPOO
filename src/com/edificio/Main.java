@@ -84,17 +84,20 @@ public class Main {
 		System.out.println(ventana);
 		System.out.println(bano);*/
 		
-		Ventana v1 = crearYDevolverObjectoVentana(41.2,16.3,"Gris","Aluminio");
-		Ventana v2 = crearYDevolverObjectoVentana(10.2,25.3,"azul","sin");
-		Ventana v3 = crearYDevolverObjectoVentana(4.2,6.3,"blanco","madera");
+		//Ventana v1 = crearYDevolverObjectoVentana(41.2,16.3,"Gris","Aluminio");
+		//Ventana v2 = crearYDevolverObjectoVentana(10.2,25.3,"azul","sin");
+		//Ventana v3 = crearYDevolverObjectoVentana(4.2,6.3,"blanco","madera");
 		
 		Ventana ventana[]=new Ventana[3];
-		ventana[0]=v1;
-		ventana[1]=v2;
-		ventana[2]=v3;
+		ventana[0]=crearYDevolverObjectoVentana(41.2,16.3,"Gris","Aluminio");
+		ventana[1]=crearYDevolverObjectoVentana(10.2,25.3,"azul","sin");;
+		ventana[2]=crearYDevolverObjectoVentana(4.2,6.3,"blanco","madera");
+		
+		
 		
 		Puerta door[]=new Puerta[1];
 		Puerta puerta=crearYDevolverObjetoPuerta(12.4,19.5,"Amarillo","sin");
+	
 		door[0]=puerta;
 		
 		Baño bano1=crearYDevolverObjetoBaño(32.5,45.8,"Negro",door,true,ventana);
@@ -129,6 +132,7 @@ public class Main {
 		Edificio ed1=crearYDevolverObjetoEdificio(54.9,76.9,"Block","blanco",apartment);
 		Edificio ed2=crearYDevolverObjetoEdificio(54.9,76.9,"cristal","rojo",apartment);
 		Edificio ed3=crearYDevolverObjetoEdificio(54.9,76.9,"Metal","Azul",apartment);
+		Edificio ed4=new Edificio();
 		
 		Edificio[]edificios=new Edificio[3];
 		edificios[0]=ed1;
@@ -198,12 +202,13 @@ public class Main {
 	
 	
 	public static Ventana crearYDevolverObjectoVentana(double ancho, double largo, String color, String material) {
-		Ventana v = new Ventana();
-		v.setAncho(ancho);
-		v.setColor(color);
-		v.setLargo(largo);
-		v.setMaterial(material);
-		return v;
+//		Ventana v = new Ventana();
+//		v.setColor(color);
+//		v.setLargo(largo);
+//		v.setMaterial(material);
+//		return v;
+		
+		return new Ventana(color, material,largo, ancho);
 	}
 	
 	public static Edificio crearYDevolverObjetoEdificio(double ancho,double largo,String material,String color,Apartamento[]ap) {
