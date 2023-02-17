@@ -4,6 +4,38 @@ import java.util.Arrays;
 
 public class Habitacion {
 	
+	public Habitacion() {}
+
+	public Habitacion(String color) {
+		this.color=color;
+	}
+	
+	public Habitacion(String color,double ancho) {
+		this(color);
+		this.ancho=ancho;
+	}
+	
+	public Habitacion(String color,double ancho,double largo) {
+		this(color,ancho);
+		this.largo=largo;
+	}
+	
+	public Habitacion(String color,double ancho,double largo,Puerta[]puertas) {
+		this(color,ancho,largo);
+		this.puertas=puertas;
+	}
+	
+	public Habitacion(String color,double ancho,double largo,Puerta[]puertas,Baño bano) {
+		this(color,ancho,largo,puertas);
+		this.bano=bano;
+		
+	}
+	
+	public Habitacion(String color,double ancho,double largo,Puerta[]puertas,Baño bano,Ventana[]ventanas) {
+		this(color,ancho,largo,puertas,bano);
+		this.ventanas=ventanas;
+	}
+	
 	private String color;
 	private double ancho;
 	private double largo;

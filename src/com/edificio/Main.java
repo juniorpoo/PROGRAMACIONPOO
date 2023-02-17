@@ -112,30 +112,30 @@ public class Main {
 		puertas[0]=puerta1;
 		puertas[1]=puerta2;
 	    
-		Habitacion hb1=crearYDevolverObjetoHabitacion(12.3,43.76,bano1,"Mamen",puertas,ventana);
+		//Habitacion hb1=crearYDevolverObjetoHabitacion(12.3,43.76,bano1,"Mamen",puertas,ventana);
 		Habitacion hb2=crearYDevolverObjetoHabitacion(15.3,42.36,bano1,"Rojo",puertas,ventana);
 		Habitacion hb3=crearYDevolverObjetoHabitacion(17.3,48.66,bano1,"azul",puertas,ventana);
 		Habitacion hb4=crearYDevolverObjetoHabitacion(18.3,49.96,bano1,"amarillo",puertas,ventana);
 		
 		Habitacion habitacion[]=new Habitacion[4];
-		habitacion[0]=hb1;
+		habitacion[0]=crearYDevolverObjetoHabitacion(12.3,43.76,bano1,"Mamen",puertas,ventana);
 		habitacion[1]=hb2;
 		habitacion[2]=hb3;
 		habitacion[3]=hb4;
 		
-		Apartamento ap1=crearYDevolverObjetoApartamento(21.4,45.9,"Verde",habitacion,402);
-		Apartamento ap2=crearYDevolverObjetoApartamento(24.4,35.9,"Amarillo",habitacion,403);
+		//Apartamento ap1=crearYDevolverObjetoApartamento(21.4,45.9,"Verde",habitacion,402);
+		//Apartamento ap2=crearYDevolverObjetoApartamento(24.4,35.9,"Amarillo",habitacion,403);
 		Apartamento []apartment=new Apartamento[2];
-		apartment[0]=ap1;
-		apartment[1]=ap2;
+		apartment[0]=crearYDevolverObjetoApartamento(21.4,45.9,"Verde",habitacion,402);
+		apartment[1]=crearYDevolverObjetoApartamento(24.4,35.9,"Amarillo",habitacion,403);
 		
-		Edificio ed1=crearYDevolverObjetoEdificio(54.9,76.9,"Block","blanco",apartment);
+		//Edificio ed1=crearYDevolverObjetoEdificio(54.9,76.9,"Block","blanco",apartment);
 		Edificio ed2=crearYDevolverObjetoEdificio(54.9,76.9,"cristal","rojo",apartment);
 		Edificio ed3=crearYDevolverObjetoEdificio(54.9,76.9,"Metal","Azul",apartment);
 		Edificio ed4=new Edificio();
 		
 		Edificio[]edificios=new Edificio[3];
-		edificios[0]=ed1;
+		edificios[0]=crearYDevolverObjetoEdificio(54.9,76.9,"Block","blanco",apartment);
 		edificios[1]=ed2;
 		edificios[2]=ed3;
 		//imprimirColorYMaterialDelObjetoEdificio(edificios);
@@ -202,7 +202,7 @@ public class Main {
 	
 	
 	public static Ventana crearYDevolverObjectoVentana(double ancho, double largo, String color, String material) {
-//		Ventana v = new Ventana();
+// 		Ventana v = new Ventana();
 //		v.setColor(color);
 //		v.setLargo(largo);
 //		v.setMaterial(material);
@@ -213,41 +213,47 @@ public class Main {
 	
 	public static Edificio crearYDevolverObjetoEdificio(double ancho,double largo,String material,String color,Apartamento[]ap) {
 		
-		Edificio ed=new Edificio();
+		return new Edificio(material,color,largo,ancho,ap);
+		/*Edificio ed=new Edificio();
 		ed.setAncho(ancho);
 		ed.setLargo(largo);
 		ed.setMaterial(material);
 		ed.setColor(color);
 		ed.setApartamento(ap);
-		return ed;
+		return ed;*/
 	}
 	
 	public static Apartamento crearYDevolverObjetoApartamento(double ancho,double largo,String color,Habitacion[]hb,int numApartamento){
 		
-		Apartamento ap1=new Apartamento();
+		
+		return new Apartamento(numApartamento,color,ancho,largo,hb);
+	/*	Apartamento ap1=new Apartamento();
 		ap1.setAncho(ancho);
 		ap1.setLargo(largo);
 		ap1.setColor(color);
 		ap1.setHabitaciones(hb);
 		ap1.setNumApartamento(numApartamento);
-		return ap1;
+		return ap1;*/
 	}
 	
 	public static Habitacion crearYDevolverObjetoHabitacion(double ancho,double largo, Baño bano,String color,Puerta[]puertas,Ventana[]ventanas) {
 		
-		Habitacion hb=new Habitacion();
+		return new Habitacion(color,ancho,largo,puertas,bano,ventanas);
+		/*Habitacion hb=new Habitacion();
 		hb.setAncho(ancho);
 		hb.setLargo(largo);
 		hb.setBano(bano);
 		hb.setColor(color);
 		hb.setPuertas(puertas);
 		hb.setVentanas(ventanas);
-		return hb;
+		return hb;*/
 	}
 	
-	public static Baño crearYDevolverObjetoBaño(double ancho,double largo,String color,Puerta[]puertas,boolean TieneEspejo,Ventana[]ventanas) {
+	public static Baño crearYDevolverObjetoBaño(double ancho,double largo,String color,Puerta[]puertas,boolean tieneEspejo,Ventana[]ventanas) {
 		
-		Baño bano=new Baño();
+		
+		return new Baño(largo,ancho,color,tieneEspejo,ventanas,puertas);
+		/*Baño bano=new Baño();
 		bano.setAncho(ancho);
 		bano.setLargo(largo);
 		bano.setColor(color);
@@ -255,7 +261,7 @@ public class Main {
 		bano.setTieneEspejo(TieneEspejo);
 		bano.setVentana(ventanas);
 		
-		return bano;
+		return bano;*/
 	}
 	
 	public static Puerta crearYDevolverObjetoPuerta(double ancho, double largo,String color,String material) {

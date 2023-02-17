@@ -4,6 +4,32 @@ import java.util.Arrays;
 
 public class Edificio {
 	
+	public Edificio() {}
+	
+	public Edificio(String material) {
+	    this.material=material;
+	}
+	
+	public Edificio(String material,String color) {
+		this(material);
+		this.color=color;
+	}
+	
+	public Edificio(String material,String color,double largo) {
+		this(material,color);
+		this.largo=largo;
+	}
+	
+	public Edificio(String material,String color,double largo,double ancho) {
+		this(material,color,largo);
+		this.ancho=ancho;
+	}
+	
+	public Edificio(String material,String color,double largo,double ancho,Apartamento[]apartamento) {
+		this(material,color,largo,ancho);
+		this.apartamento=apartamento;
+	}
+	
 	private String material;
 	private String color;
 	private double largo;

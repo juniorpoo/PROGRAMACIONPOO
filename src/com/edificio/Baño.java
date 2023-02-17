@@ -3,7 +3,38 @@ package com.edificio;
 import java.util.Arrays;
 
 public class Baño {
+	
+	public Baño() {}
 
+	public Baño(double largo) {
+		this.largo=largo;
+	}
+	
+	public Baño(double largo,double ancho) {
+		this(largo);
+		this.ancho=ancho;
+	}
+	
+	public Baño(double largo,double ancho,String color) {
+		this(largo,ancho);
+		this.color=color;
+	}
+	
+	public Baño(double largo,double ancho,String color,boolean tieneEspejo) {
+		this(largo,ancho,color);
+		this.tieneEspejo=tieneEspejo;
+	}
+	
+	public Baño(double largo, double ancho, String color, boolean tieneEspejo,Ventana[]vent) {
+		this(largo,ancho,color,tieneEspejo);
+		this.ventana=vent;
+	}
+	
+	public Baño(double largo,double ancho, String color,boolean tieneEspejo,Ventana[]vent,Puerta[]puertas) {
+		this(largo,ancho,color,tieneEspejo,vent);
+		this.puertas=puertas;
+	}
+	
 	private double largo;
 	private double ancho;
 	private String color;

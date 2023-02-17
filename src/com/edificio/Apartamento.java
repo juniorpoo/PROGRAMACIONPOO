@@ -4,11 +4,44 @@ import java.util.Arrays;
 
 public class Apartamento {
 	
+	public Apartamento() {}
+	
+	public Apartamento(int numApartamento) {
+		this.numApartamento=numApartamento;
+	}
+	
+	public Apartamento(int numApartamento,String color) {
+		this(numApartamento);
+		this.color=color;
+	}
+	
+	public  Apartamento(int numApartamento,String color,double largo) {
+		this(numApartamento,color);
+		this.largo=largo;
+	}
+	
+	public Apartamento(int numApartamento,String color,double largo,double ancho) {
+		this(numApartamento,color,largo);
+		this.ancho=ancho;
+	}
+	
+	public Apartamento(int numApartamento,String color,double largo, double ancho,Habitacion[]hab) {
+		this(numApartamento,color,largo,ancho);
+		this.hab=hab;
+	}
+	
+	public Apartamento(int numApartamento,String color,double largo,double ancho,Habitacion[]hab,Baño[]banos) {
+		this(numApartamento,color,largo,ancho,hab);
+		this.banos=banos;
+	}
+	
+	
+	
 	private int numApartamento;
 	private String color;
 	private double largo;
 	private double ancho;
-	private Habitacion[] habitaciones;
+	private Habitacion[] hab;
 	private Baño[] banos;
 	
 	public int getNumApartamento() {
@@ -36,15 +69,15 @@ public class Apartamento {
 		this.ancho = ancho;
 	}
 	public Habitacion[] getHabitaciones() {
-		return habitaciones;
+		return hab;
 	}
 	public void setHabitaciones(Habitacion[] habitaciones) {
-		this.habitaciones = habitaciones;
+		this.hab = habitaciones;
 	}
 	@Override
 	public String toString() {
 		return "Apartamento [numApartamento=" + numApartamento + ", color=" + color + ", largo=" + largo + ", ancho="
-				+ ancho + ", habitaciones=" + Arrays.toString(habitaciones) + "]";
+				+ ancho + ", habitaciones=" + Arrays.toString(hab) + "]";
 	}
 	
 }
